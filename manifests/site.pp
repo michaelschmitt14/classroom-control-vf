@@ -43,6 +43,12 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
+  
+  package {'cowsay':
+    ensure => present,
+    provider => gem,
+  }
+  
   file { '/etc/motd':
   ensure  => file,
   owner   => 'root',
