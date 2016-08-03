@@ -5,7 +5,7 @@ class skeleton {
     group => 'root',
     mode => '0755',
   }
-  file {'/etc/skel/.bachrc':
+  file {'/etc/skel/.bashrc':
     ensure => file,
     owner => 'root',
     group => 'root',
