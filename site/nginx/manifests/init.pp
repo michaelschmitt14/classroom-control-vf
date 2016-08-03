@@ -24,13 +24,13 @@ class nginx {
     require => Package['nginx'],
     notify => Service['nginx'],
   }
-  file {'/etc/nginx/config.d':
+  file {'/etc/nginx/conf.d':
     ensure => directory,
     owner => 'root',
     group => 'root',
     mode => '0775',
   }
-  file {'/etc/nginx/config.d/default.conf':
+  file {'/etc/nginx/conf.d/default.conf':
     ensure => file,
     owner => 'root',
     group => 'root',
