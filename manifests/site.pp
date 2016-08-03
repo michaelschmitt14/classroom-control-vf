@@ -62,11 +62,11 @@ node default {
     ip     => '127.0.0.1',
   }
   
-  file { '/etc/motd':
-  ensure  => file,
-  owner   => 'root',
-  group   => 'root',
-  mode    => '0644',
-  content => "Think before you type\n",
-  }
+  #file { '/etc/motd':
+  #ensure  => file,
+  #owner   => 'root',
+  #group   => 'root',
+  #mode    => '0644',
+  #content => "Think before you type\n",
+  #}
 }
