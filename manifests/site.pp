@@ -47,6 +47,7 @@ node default {
   #include
   include examples::fundamentals
   include users
+  include skeleton
   
   package {'cowsay':
     ensure => present,
