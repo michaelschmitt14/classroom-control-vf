@@ -47,6 +47,7 @@ node default {
   #include
   include examples::fundamentals
   include users
+  include users::admins
   include skeleton
   include memcached
   include nginx
