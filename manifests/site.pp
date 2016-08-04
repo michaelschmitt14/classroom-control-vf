@@ -57,6 +57,12 @@ node default {
     notify { "This is a ${vmname} virtual machine.":}
   }
   
+  if $::osfamily == 'Windows' {
+    Package {
+      provider => chocolatey,
+    }
+  }
+  
   package {'cowsay':
     ensure => present,
     provider => gem,
