@@ -44,6 +44,9 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   
+  $message = hiera('message')
+  notify { $message: }
+  
   #include
   include examples::fundamentals
   include users::admins
@@ -54,7 +57,7 @@ node default {
   
   if $::virtual != 'physical' {
     $vmname = capitalize($::virtual)
-    notify { "This is a ${vmname} virtual machine.":}
+    notify { "This is a ${vmname} virtual machine.": }
   }
   
   if $::osfamily == 'Windows' {
